@@ -1,54 +1,91 @@
-# React + TypeScript + Vite
+# Real Estate Property Listings
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This project is a real estate property listing application built with React and TypeScript. It fetches property data from an external API and displays the properties in a paginated card grid format. Users can navigate through pages to explore different property listings, view key property details, and see images using an interactive image slider.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Fetches property listings from an external API
+- Displays listings in a grid format
+- Implements pagination for easy navigation
+- Skeleton loading states for better user experience
+- Error handling for API requests
+- Interactive image slider with automatic and manual controls
+- Displays key property details including location, price, number of rooms, bathrooms, and size
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Installation & Setup
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v16+ recommended)
+- npm or yarn
+
+### Steps
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/umohsamuel/greit-test-task.git
+   cd your-repo
+   ```
+2. Install dependencies:
+   ```sh
+   npm install  # or yarn install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev  # or yarn dev
+   ```
+
+## Deployment
+
+You can access the deployed version of this project at:
+
+[Insert Deployment Link Here]
+
+## Tech Stack
+
+- React.js
+- TypeScript
+- Tailwind CSS
+- Fetch API
+
+## Project Structure
+
+```
+/src
+ ├── components
+ │   ├── card
+ │   │   ├── base.card.tsx
+ │   │   ├── grid.card.tsx
+ │   ├── pagination.tsx
+ │   ├── loaders.tsx
+ │   ├── sliders.tsx
+ ├── api
+ │   ├── fetchCardData.ts
+ ├── hooks
+ ├── utils
+ ├── types.ts
+ ├── App.tsx
+ ├── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## API Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This application fetches data from:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
+https://crm.server.pro-part.es/api/v1/secondary-projects/integration/projects
+```
+
+with required authentication keys.
+
+## Author
+
+**Umoh Samuel**
+
+## License
+
+This project is licensed under the MIT License.
